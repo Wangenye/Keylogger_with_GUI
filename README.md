@@ -9,8 +9,14 @@ The Keylogger is designed to send the keyboard inputs(logs) to the email which t
 
 The options will be between time (between 30minutes to 24 hours) and number  of characters (between 200 -2000 characters).
 
-### Sample run
+### Set up
+Create virtual environment
+#### Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
+#### Run
 ```bash
 python key_logger.py
 ```
